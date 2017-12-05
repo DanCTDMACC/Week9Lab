@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService {
 		Account targetAccount = accountDao.find(targetAccountId);
 		
 		sourceAccount.setBalance(sourceAccount.getBalance() - amount);
-		targetAccount.setBalance(targetAccount.getBalance() - amount);
+		targetAccount.setBalance(targetAccount.getBalance() + amount);
 		
 		accountDao.update(sourceAccount);
 		accountDao.update(targetAccount);
